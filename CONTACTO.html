@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacto | Fresánica</title>
+
+  <!-- Tu hoja de estilos -->
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Librería de iconos Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+  <header class="hero contacto">
+    <nav class="menu">
+      <div class="logo-container">
+        <img src="logo-fresanica.png" alt="Logo Fresánica" class="logo-img">
+        <h1 class="logo-text">CAFÉ & SOUVENIRS</h1>
+      </div>
+      <ul>
+        <li><a href="index.html">INICIO</a></li>
+        <li><a href="productos.html">PRODUCTOS</a></li>
+        <li><a href="galeria.html">GALERÍA</a></li>
+        <li><a href="nosotros.html">NOSOTROS</a></li>
+        <li><a href="contacto.html" class="activo">CONTACTO</a></li>
+        <li><a href="pedidos.html">PEDIDOS</a></li>
+      </ul>
+    </nav>
+
+    <h2>Contáctanos</h2>
+  </header>
+
+  <section class="info">
+    <div class="columns">
+      <div class="col">
+        <img src="qrcode_www.instagram.com.png" alt="Código QR Instagram" class="qr-img">
+        <img src="qrcode_www.facebook.com.png" alt="Código QR Facebook" class="qr-img">
+        <img src="qrcode_www.TIK TOK.com.png.jpg" alt="Código QR TikTok" class="qr-img">
+      </div>
+    </div>
+
+    <p>Puedes escribirnos a: <strong>info@fresanica.com</strong> o llamarnos al <strong>+505 7778 1474 / 8779 7911</strong>.</p>
+
+    <!-- Redes Sociales -->
+    <div class="redes-sociales">
+      <a href="https://wa.me/50577781474" target="_blank" title="WhatsApp principal">
+        <i class="fa-brands fa-whatsapp"></i>
+      </a>
+      <a href="https://wa.me/50587797911" target="_blank" title="WhatsApp alternativo">
+        <i class="fa-brands fa-whatsapp"></i>
+      </a>
+      <a href="https://www.facebook.com/share/19qXKmSTGT/" target="_blank" title="Facebook">
+        <i class="fa-brands fa-facebook"></i>
+      </a>
+      <a href="https://www.instagram.com/fresa_nica?igsh=emljaWdvOWlrN3Zo" target="_blank" title="Instagram">
+        <i class="fa-brands fa-instagram"></i>
+      </a>
+      <a href="https://www.tiktok.com/@fresanic?_t=ZM-90OfVaSPIjc&_r=1" target="_blank" title="TikTok">
+        <i class="fa-brands fa-tiktok"></i>
+      </a>
+    </div>
+  </section>
+
+  <!-- FORMULARIO DE CONTACTO -->
+  <section class="formulario-contacto">
+    <h3>Envíanos un mensaje</h3>
+    <form action="https://formspree.io/f/mnqepwpr" method="POST">
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+
+      <label for="email">Correo electrónico:</label>
+      <input type="email" id="email" name="email" placeholder="tucorreo@ejemplo.com" required>
+
+      <label for="mensaje">Mensaje:</label>
+      <textarea id="mensaje" name="mensaje" rows="5" placeholder="Escribe tu mensaje aquí..." required></textarea>
+
+      <button type="submit">Enviar</button>
+    </form>
+  </section>
+
+  <style>
+    /* --- Tamaño del código QR --- */
+    .qr-img {
+      width: 180px;
+      height: auto;
+      display: block;
+      margin: 0 auto 10px;
+      border-radius: 8px;
+    }
+
+    /* --- Estilos de redes sociales --- */
+    .redes-sociales {
+      margin-top: 25px;
+      text-align: center;
+    }
+
+    .redes-sociales a {
+      font-size: 40px;
+      margin: 0 15px;
+      color: #333;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .redes-sociales a:nth-child(1):hover,
+    .redes-sociales a:nth-child(2):hover {
+      color: #25D366; /* WhatsApp */
+    }
+
+    .redes-sociales a:nth-child(3):hover {
+      color: #1877F2; /* Facebook */
+    }
+
+    .redes-sociales a:nth-child(4):hover {
+      color: #E4405F; /* Instagram */
+    }
+
+    .redes-sociales a:nth-child(5):hover {
+      color: #000000; /* TikTok */
+    }
+
+    /* --- Formulario de contacto --- */
+    .formulario-contacto {
+      background-color: #f5f5f5;
+      padding: 30px;
+      border-radius: 15px;
+      max-width: 600px;
+      margin: 50px auto;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .formulario-contacto h3 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    .formulario-contacto form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .formulario-contacto label {
+      font-weight: bold;
+    }
+
+    .formulario-contacto input,
+    .formulario-contacto textarea {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 16px;
+      width: 100%;
+    }
+
+    .formulario-contacto button {
+      background-color: #d63384;
+      color: white;
+      border: none;
+      padding: 12px;
+      font-size: 16px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .formulario-contacto button:hover {
+      background-color: #b02a6f;
+    }
+  </style>
+</body>
+</html>

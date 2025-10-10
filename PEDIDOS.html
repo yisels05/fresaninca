@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pedidos | Fresánica</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="hero pedidos">
+    <nav class="menu">
+      <div class="logo-container">
+        <img src="logo-fresanica.png" alt="Logo Fresánica" class="logo-img">
+        <h1 class="logo-text">CAFÉ & SOUVENIRS</h1>
+      </div>
+      <ul>
+        <li><a href="index.html">INICIO</a></li>
+        <li><a href="productos.html">PRODUCTOS</a></li>
+        <li><a href="galeria.html">GALERÍA</a></li>
+        <li><a href="nosotros.html">NOSOTROS</a></li>
+        <li><a href="contacto.html">CONTACTO</a></li>
+        <li><a href="pedidos.html" class="activo">PEDIDOS</a></li>
+      </ul>
+    </nav>
+
+    <div class="hero-texto">
+      <h2>¡Haz tu pedido y disfruta del sabor único de Fresánica!</h2>
+      <p>Del campo a tu taza, con amor y tradición nicaragüense ☕🌿</p>
+    </div>
+  </header>
+
+  <section class="info-pedidos">
+    <h3>📦 ¿Cómo hacer tu pedido?</h3>
+    <p>
+      En <strong>Fresánica</strong> puedes realizar tus pedidos de café, malteadas, postres y souvenirs personalizados 
+      de manera fácil y rápida. ¡Queremos ser parte de tus momentos especiales!
+    </p>
+
+    <div class="pasos-pedido">
+      <div class="paso">
+        <h4>1️⃣ Elige tu producto</h4>
+        <p>Explora nuestro catálogo y selecciona tu favorito.</p>
+      </div>
+      <div class="paso">
+        <h4>2️⃣ Personaliza tu pedido</h4>
+        <p>Indícanos sabores, tamaños o detalles especiales para tu evento o regalo.</p>
+      </div>
+      <div class="paso">
+        <h4>3️⃣ Realiza tu pedido</h4>
+        <p>Llena el siguiente formulario o escríbenos por WhatsApp.</p>
+      </div>
+      <div class="paso">
+        <h4>4️⃣ ¡Disfruta!</h4>
+        <p>Recibe tu pedido con la calidad y cariño que solo Fresánica ofrece.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FORMULARIO DE PEDIDOS -->
+  <section class="formulario-pedidos">
+    <h3>📝 Realiza tu pedido aquí</h3>
+    <form id="pedidoForm">
+      <label for="nombre">Nombre completo:</label>
+      <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+
+      <label for="producto">Producto:</label>
+      <input type="text" id="producto" name="producto" placeholder="Ej: Café latte, Malteada, Postre..." required>
+
+      <label for="cantidad">Cantidad:</label>
+      <input type="number" id="cantidad" name="cantidad" min="1" placeholder="Ej: 2" required>
+
+      <label for="mensaje">Detalles del pedido:</label>
+      <textarea id="mensaje" name="mensaje" rows="4" placeholder="Sabores, tamaño, entrega o cualquier detalle especial..."></textarea>
+
+      <button type="submit" class="btn-whatsapp">📲 Enviar pedido por WhatsApp</button>
+    </form>
+  </section>
+
+  <section class="contacto-pedido">
+    <h3>📞 También puedes contactarnos directamente</h3>
+    <ul class="whatsapp-lista">
+      <li>📱 <strong>7778-1474</strong></li>
+      <li>📱 <strong>8779-7911</strong></li>
+    </ul>
+  </section>
+
+  <footer>
+    <p>© 2025 Fresánica | Café & Souvenirs • Hecho con ❤ en Nicaragua</p>
+  </footer>
+
+  <script>
+    // Función para enviar el pedido por WhatsApp
+    document.getElementById("pedidoForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+
+      const nombre = encodeURIComponent(document.getElementById("nombre").value);
+      const producto = encodeURIComponent(document.getElementById("producto").value);
+      const cantidad = encodeURIComponent(document.getElementById("cantidad").value);
+      const mensaje = encodeURIComponent(document.getElementById("mensaje").value);
+
+      const texto = `Hola Fresánica! 👋%0A%0AQuiero hacer un pedido:%0A
+      🧍‍♂ Nombre: ${nombre}%0A
+      ☕ Producto: ${producto}%0A
+      🔢 Cantidad: ${cantidad}%0A
+      📝 Detalles: ${mensaje}`;
+
+      const url = https;//wa.me/50577781474?text=${texto};
+      window;open(url, "_blank");
+    });
+  </script>
+</body>
+</html>
