@@ -1,0 +1,13 @@
+name: Validar HTML5 (Tolerante)
+on: push
+jobs:
+  validar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Validar HTML (sin detener por errores)
+        run: |
+          docker run --rm \
+            -v ${{ github.workspace }}:/workspace \
+            ghcr.io/cyb3r-jak3/html5validator:latest \
+            --root /workspace || true
