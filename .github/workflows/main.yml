@@ -1,13 +1,14 @@
-name: Validar HTML5 (Tolerante)
+Publicación automática con GitHub Pages
+`yaml
+name: Despliegue automático
 on: push
 jobs:
-  validar:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - name: Validar HTML (sin detener por errores)
-        run: |
-          docker run --rm \
-            -v ${{ github.workspace }}:/workspace \
-            ghcr.io/cyb3r-jak3/html5validator:latest \
-            --root /workspace || true
+deploy:
+runs-on: ubuntu-latest
+steps:
+- uses: actions/checkout@v3
+- uses: actions/configure-pages@v3
+- uses: actions/upload-pages-artifact@v2
+with:
+path: ./
+- uses: actions/deploy-pages@v2
